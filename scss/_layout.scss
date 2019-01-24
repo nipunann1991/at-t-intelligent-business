@@ -1,0 +1,138 @@
+
+
+html{
+	font-size:  57%;
+
+	@include breakpoint($large-device){
+		font-size:  59%;
+	}
+
+	@include breakpoint($tablet){
+		font-size:  62.5%;
+	}
+	
+}
+
+body{
+	font-size: $default-font-size;
+}
+
+
+h1{
+	color: $busint-text-blue; 
+	font-family: $busint-font-bold;
+} 
+ 
+
+h1, h2, h3, h4, p{ 
+	position: relative;
+}
+
+.sw-content-wrap{
+	font-family: $busint-font-regular;
+}
+ 
+
+.busint-light-blue{
+	color: $busint-light-blue; 
+}
+
+.busint-fw-bold{
+	font-family: $busint-font-bold; 
+}
+
+.busint-blue{
+	color: $busint-text-blue; 
+}
+
+
+
+span.busint-lg-font{
+	font-size: $main-heading-font-size - 3.2;
+	font-family: $busint-font-bold; 
+	line-height: 4rem;
+	display: inline-block;
+
+	em{
+		font-style: normal;
+		font-size: $main-heading-font-size - 2.7;
+	}
+ 
+	@include breakpoint($large-device){
+		font-size: $main-heading-font-size - 2.5;
+		font-family: $busint-font-bold; 
+		line-height: 4rem;
+		display: inline-block;
+	}
+
+	@include breakpoint($tablet){
+		font-size: $main-heading-font-size - 1;
+		line-height: 5rem;
+	}
+}
+
+
+span.busint-lg-font-fw600{
+	font-size: $main-heading-font-size - 2.5;
+	font-family: $busint-font-medium; 
+	letter-spacing: -0.1rem;
+	line-height: 4rem;
+	display: inline-block;
+
+	@include breakpoint($tablet){
+		font-size: $main-heading-font-size - 1;
+		line-height: 5rem;
+	}
+}
+
+span.busint-sm-font{
+	font-size: $section-h3-font-size + 0.2;
+	font-family: $busint-font-bold; 
+	line-height: $section-h3-font-size + 0.2;
+	display: inline-block;
+
+	@include breakpoint($tablet){
+		font-size: $section-h3-font-size + 0.2;
+		line-height: $section-h3-font-size + 0.2;
+	}
+}
+
+
+.hidden-md{
+	display: none;
+
+	@include breakpoint(769px){
+		display: block;
+	}
+}
+
+.visible-sm{
+	display: block;
+
+	@include breakpoint($tablet){
+		display: none;
+	}
+}
+
+.visible-sm-m{
+	display: block;
+
+	@include breakpoint($medium-device){
+		display: none;
+	}
+}
+
+.busint-margin{  
+	
+	padding: 0 2.5rem;
+
+	@include breakpoint($tablet){
+		padding: 0 7rem;
+	}
+
+	@include breakpoint($x-small-desktop){
+		padding: 0 $container-padding;
+	}
+
+
+}

@@ -1,0 +1,1822 @@
+
+
+.width-1000{
+	border-left: 1px #eee solid;
+	border-right: 1px #eee solid;
+}
+
+.sw-content-wrap{
+	
+	header.busint-header{
+		background: $busint-white;
+		padding: 0;
+
+		.busint-container{
+			background-image: image('header-bg.jpg'); 
+			background-repeat: no-repeat;
+			color: $busint-text-blue;
+			padding-top: 4rem;
+			background-size: cover;
+			background-position: 13% -155px;
+
+			@include breakpoint($tablet){
+				background-size: 100%;
+				background-position: 0% 0%; 
+			}
+
+
+			.busint-blank-section{
+				width: 100%;
+				height: 1px;
+				display: block;
+				padding-bottom: 30rem;
+ 
+
+				@include breakpoint(800px){
+					padding-bottom: 35rem;
+				}
+				
+				@include breakpoint(900px){
+					padding-bottom: 45rem;
+				}
+
+				@include breakpoint($x-small-desktop){
+					padding-bottom: 50rem;
+				}
+			}
+			 
+
+			.busint-logo-wrapper{
+				width: 100%;	
+				overflow: hidden; 
+
+				img{
+					width: 20rem; 
+					float: right;
+					cursor: pointer;
+				}
+			}
+
+			h1{ 
+				font-family: $busint-font-medium; 
+				letter-spacing: -0.15rem;
+				color: inherit;
+				max-width: initial;  
+				margin-top: 8rem;  
+				line-height: ($main-heading-font-size + 0.5) * 0.75;
+				font-size: ($main-heading-font-size) * 0.75;
+				width: 100%;
+				min-width: 100%;
+
+
+				@include breakpoint($tablet){
+					margin-top: 4rem;  
+					line-height: $main-heading-font-size + 0.5;
+					font-size: $main-heading-font-size;
+				} 
+				
+				@include breakpoint($x-small-desktop){
+					margin-top: 10rem;  
+				}
+
+				span:nth-child(1){
+					display: block;
+					margin: 0; 
+
+					@include breakpoint($tablet){
+						margin-left: 16.5rem;
+					}
+				}
+
+				span:nth-child(2){
+					display: block; 
+					margin: 0; 
+					
+					@include breakpoint($tablet){
+						margin-left: 12rem;
+					}
+				}
+
+			}
+
+			h3{
+				color: inherit; 
+				font-family: $busint-font-regular; 
+				line-height: $section-h3-font-size + 0.7; 
+				margin-left: 4rem;
+			}
+			
+			.busint-header-bottom{
+				position: relative;
+				padding-bottom: 4rem;
+
+				p{
+					font-size: $default-font-size;
+					color: $busint-black;
+					margin-bottom: 0;
+				} 
+
+				h2{
+					font-size: $section-h2-font-size;
+					font-family: $busint-font-medium; 
+					letter-spacing: -0.1rem;
+					margin-bottom: 5rem; 
+				}
+
+				.busint-block{
+					position: relative;
+
+					&:before{
+						@include calc('width', '100% + 13.5rem');
+						content: '';
+						height: 5px; 
+						background: $busint-text-blue;
+						position: absolute;
+						top: 23.5rem;
+					    right: 0;
+					    z-index: 101;  
+
+				    	@include breakpoint($large-device){
+							top: 23.5rem;  
+						}
+
+						@include breakpoint($tablet){
+							top: 28.2rem;
+						}
+					}
+
+					.busint-blue-box{
+						background: $busint-light-blue;
+						color: $busint-white; 
+						padding: 20px;	
+						width: 25rem;
+						position: absolute;
+						z-index: 0;
+
+						@include breakpoint($large-device){
+							width: 22rem;
+						}
+
+						@include breakpoint($tablet){
+							width: 25rem;
+						}
+						
+
+						h4{
+							font-size: $section-h3-font-size;
+							line-height: $section-h3-font-size + 0.3;
+							font-family: $busint-font-medium;
+							color: inherit;
+							margin-bottom: 0; 
+						}
+					}
+
+					.busint-vector-img{
+						overflow: hidden;
+						z-index: 100;
+		    			position: relative; 
+
+						img{
+							width: auto;
+							height: 25rem;  
+
+							@include breakpoint($tablet){
+								height: 30rem; 
+							}
+						}
+						
+					}
+
+
+					&.busint-left-block{
+						
+						&:before{
+							left: -13.5rem; 
+
+
+						}
+
+						.busint-blue-box{
+							padding-left: 6.5rem;
+							top: 1rem;
+	    					left: 6rem; 
+
+	    					@include breakpoint($large-device){
+								left: 5rem; 
+							}
+
+							@include breakpoint($tablet){
+								left: 6rem; 
+							}
+						}
+
+
+						p{
+							width: 100%;
+							float: left;
+
+							 
+
+							@include breakpoint($x-small-desktop){
+								width: 70%;
+								float: right;
+							}
+						}
+					}
+
+					&.busint-right-block{
+						margin-top: 4rem;
+
+						@include breakpoint($large-device){
+							margin-top: 0;
+						}
+
+						&:before{
+							right: 0; 
+
+							@include breakpoint($tablet){
+								right: -5.5rem;
+							}
+
+							 @include breakpoint($x-small-desktop){
+								right: -13.5rem;
+							}
+						}
+
+						.busint-blue-box{
+							top: 1rem;
+							width: 22rem;
+							right: 8rem;
+	    					padding-right: 6.5rem;
+
+	    					@include breakpoint($large-device){
+								width: 18rem;
+							}
+
+							@include breakpoint($tablet){
+								width: 22rem;
+							}
+						}
+
+
+						p{
+							width: 100%;
+							text-align: right;
+							float: right; 
+
+							@include breakpoint($x-small-desktop){
+								width: 62%;
+							}
+						}
+
+						img{
+							float: right;
+						}
+					}
+				}   
+			}
+
+		} 
+	}
+
+	section{ 
+		overflow: hidden;
+		
+
+		&.sw-content{
+			border-bottom: 0;
+
+			p{
+				font-size: $default-font-size;
+				margin-bottom: 0;
+			}
+		}
+
+		&.busint-stats-section{
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+			background: $busint-light-blue-bg;
+
+			.busint-stat-img{
+
+				img{
+					width: 75%;
+					display: block;
+					margin: auto;
+
+
+					@include breakpoint($tablet){
+						width: 100%;
+					}
+
+
+				}
+
+			}
+
+			.busint-stat-content{
+				@include flex-box();
+				align-items: flex-end;   
+				margin-top: 2rem;
+				justify-content: center;
+				text-align: center;
+
+				@include breakpoint($tablet){
+					margin-top: 0;
+					justify-content: left;
+					text-align: left;
+				}
+			}  
+		}
+
+
+		&.busint-comparison-section{
+			padding-top: 5rem;
+			padding-bottom: 0;
+			text-align: center;
+
+			@include breakpoint($x-small-desktop){ 
+				padding-top: 9rem;		
+			}
+
+			p.highlited-text{
+				font-size: $default-font-size + 0.3;
+				line-height: $default-font-size + 0.8;
+				margin-top: 3rem;
+			}
+
+			.busint-comparison-row{
+				padding-top: 3rem;
+
+				@include breakpoint($tablet){ 
+					padding-top: 5rem;			
+				}
+				
+				.busint-block{
+					@include flex-box();
+					align-items: flex-end;
+					padding: 0;  
+					text-align: center;
+					justify-content: center;
+
+					@include breakpoint($tablet){ 
+						justify-content: left; 					
+					}
+
+					  
+					h2{
+						font-size: 14rem;
+						line-height: 13rem;
+					    color: #f8f8f8; 
+					    margin-bottom: 0;
+					    font-family: $busint-font-bold;
+					    text-transform: uppercase; 
+
+					     @include breakpoint($tablet){ 
+							font-size: 18rem;
+							line-height: 13rem;
+					    }
+					}
+
+					p{ 
+						margin-bottom: 0;
+						line-height: 2rem;
+					}
+
+					img.busint-mid-img{
+						display: none;
+
+
+						@include breakpoint(576px){ 
+							position: absolute;
+							display: block;
+							z-index: 10;
+							width: 120px;
+							top: 7rem;
+							left: 4rem;
+							right: 0;
+							bottom: 0;
+					    }
+
+
+						@include breakpoint($large-device){ 
+							width: 160px;	
+							top: 5rem;
+							left: 4rem;		
+						}
+
+						&.busint-checklist{
+							width: 110px;
+						    left: 6rem;
+						    top: 1rem;
+						}
+					}
+
+					span.busint-blue.busint-lg-font{
+						display: block;
+					}
+
+					&.busint-bottom{
+						@include flex-box-center(); 
+						flex-direction: column;
+						padding: 0;
+						margin-top: 3rem;
+						padding-top: 3rem;
+						padding-bottom: 2rem;
+						position: relative;
+
+						@include breakpoint(576px){ 
+							margin-top: 1rem;
+							padding-top: 7rem;
+						}
+
+						&:before { 
+						    width: calc(100% + 27rem);
+						    content: '';
+						    height: 5px;
+						    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#20a1db+0,ffffff+100,7db9e8+100 */
+							background: #20a1db; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+							background: -webkit-linear-gradient(left, #20a1db 0%, #ffffff 100%, #7db9e8 100%);
+							background: -o-linear-gradient(left, #20a1db 0%, #ffffff 100%, #7db9e8 100%);
+							background: linear-gradient(to right, #20a1db 0%, #ffffff 100%, #7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20a1db', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
+						    position: absolute;
+						    left: - $container-padding + 1.5;
+						    top: 0;
+						    right: 0;
+						    z-index: 0;
+						}
+					}
+				}
+				
+			}
+		}
+
+		&.busint-discriptive-content-section{
+
+			&#busint-section-1{
+				background-image: image('mid-bg-img.jpg');
+				background-size: 100%;
+				background-repeat: no-repeat; 
+				position: relative;
+
+				&:before{
+					content: '';
+					top: 0;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: rgba(255, 255, 255, 0.5);
+
+					@include breakpoint($tablet-medium){
+						display: none;
+					}
+					
+				}
+
+				.busint-blank-area{
+					width: 100%;
+				    height: 1px;
+				    display: block; 
+
+				    &.bl1{
+						padding-bottom: 10rem;
+
+				    	@include breakpoint($tablet){
+							padding-bottom: 25rem;
+						}
+
+						@include breakpoint(940px){
+							padding-bottom: 25rem;
+						}
+
+						@include breakpoint($x-small-desktop){
+							padding-bottom: 35rem;
+						}
+
+						
+				    	
+				    }
+
+				    &.bl2{
+				    	padding-bottom: 2rem;
+
+				    	@include breakpoint($tablet-medium){
+							padding-bottom: 8rem;
+						}
+
+				    	@include breakpoint(940px){
+							padding-bottom: 16rem;
+						}
+
+				    	@include breakpoint($x-small-desktop){
+							padding-bottom: 23rem;
+						}
+				    }
+				}
+
+				p{
+					&.busint-w-1{
+						width: 100%;	
+
+						@include breakpoint($tablet){
+							width: 80%;	 
+						}
+					}
+
+					&.busint-w-2{
+						width: 100%;
+						margin-bottom: 5rem;
+
+						@include breakpoint($large-device){
+							width: 50%;	
+						} 
+
+						@include breakpoint($tablet){
+							width: 44%;	
+						}
+
+
+					}
+					
+				}
+
+				.busint-content-area{  
+
+					.busint-section-1{ 
+						
+						.busint-row-1{
+							margin-top: 3rem;	
+
+							.busint-left-block{
+
+								img.busint-tablet-devices{
+									left: 0;	
+									width: 250px;
+									display: block;
+									margin: auto;
+
+									@include breakpoint($large-device){
+										width: 100%;
+									}
+		
+									@include breakpoint($tablet){
+										position: relative;
+										width: 80%;
+										left: -8rem;	
+										@include calc('width', '100% + 8rem');
+									}
+									
+
+								}
+							}
+
+							.busint-right-block{
+								p{
+									margin-top: 3rem;
+
+									@include breakpoint($large-device){
+										margin-top: 5rem;
+									}
+								}
+							}
+						}
+						
+						.busint-row-2{
+							position: relative; 
+							top: 0;
+
+							@include breakpoint($tablet){
+								top: -7rem;
+	    					} 
+
+							.busint-right-block{
+								@include flex-box(); 
+								margin-top: 5rem;
+								margin-bottom: 3rem;
+
+								@include breakpoint($large-device){
+									margin-top: 2rem;
+									margin-bottom: 3rem;
+								}
+								 
+		    					@include breakpoint($tablet){ 
+									margin-top: 0;  
+									margin-bottom: 0;
+		    						padding: 0;	 
+		    						text-align: right;  
+		    					} 
+
+		    					p{
+		    						display: block;
+		    					}
+
+								img.busint-sandclock{
+									position: relative;
+									right: 0;	
+									top: 0;
+									display: block;
+									width: 170px;
+
+									@include breakpoint($tablet){
+		    							right: -3rem;	
+		    						}		
+								}
+							}
+						}
+
+						.busint-row-3{
+
+							.busint-left-block{
+								@include flex-box(); 
+								 
+								@include breakpoint($tablet){
+	    							padding: 0;	 
+	    						}
+
+
+								p{
+									font-size: $section-h4-font-size - 0.1;
+									line-height: $section-h4-font-size + 0.6;
+									margin-top: 2rem;
+
+									@include breakpoint($large-device){
+										font-size: $section-h4-font-size - 0.1;
+										line-height: $section-h4-font-size + 1.2;
+										margin-top: 5rem;
+									}
+
+								}
+
+								.busint-mobile{ 
+									padding-right: 1.5rem;
+
+									@include breakpoint($tablet){
+		    							padding-right: 3rem;
+		    						}
+
+									img{
+										width: 120px;
+										
+										@include breakpoint($tablet){
+			    							width: 150px;	
+			    						}	
+
+									}
+								}
+
+								.busint-block-desc{
+
+									.busint-box-wrapper{ 
+    									position: relative;
+    									display: none;
+
+    									@include breakpoint($large-device){
+			    							display: block;
+			    						}	 
+
+    									@include breakpoint($tablet){
+			    							margin-top: 3rem;
+											left: -2rem;
+			    						}
+
+										.busint-box{
+											display: inline-block;
+											border-radius: 0.5rem;
+											position: relative;
+
+											&.b-1{  
+												@include square-box(4.5rem, #009edb);
+											}
+
+											&.b-2{ 
+												@include square-box(3.8rem, #096ebe);
+												margin-left: 1.2rem;
+												top: 5px;
+											}
+
+											&.b-3{ 
+												@include square-box(3.8rem, #009edb);
+												margin-left: 1.2rem;
+												top: -5px;
+											}
+
+											&.b-4{ 
+												@include square-box(3.8rem, #30d1ff);
+												left: -1rem;
+												top: 2rem;
+											}
+
+											&.b-5{ 
+												@include square-box(3rem, #30d1ff); 
+												top: 1.7rem;
+											}
+
+											&.b-6{ 
+												@include square-box(3.8rem, #18b9ed); 
+												margin-left: 1.2rem; 
+												top: 0.3rem;
+											}
+
+											&.b-7{ 
+												@include square-box(2.7rem, #d2d2d2); 
+												margin-left: 1.2rem; 
+												top: -1.6rem;
+											}
+
+											&.b-8{ 
+												@include square-box(2.7rem, #d2d2d2); 
+												left: -0.7rem; 
+												top: 1.6rem;
+											}
+
+											&.b-9{ 
+												@include square-box(2.7rem, #d2d2d2); 
+												left: 0.5rem; 
+												top: 0rem;
+											}
+
+											&.b-10{ 
+												@include square-box(1.5rem, #d2d2d2); 
+												margin-left: 1.5rem; 
+												top: 0rem;
+											}
+										}
+
+									} 
+								}
+							}
+						}
+
+						.busint-row-4{
+							position: relative;
+							margin-top: 5rem;
+							margin-bottom: 20rem;
+
+							@include breakpoint($tablet){
+								margin-top: 8rem; 
+    						}	
+
+
+							p{
+								font-size: $section-h4-font-size - 0.1;
+								line-height: $section-h4-font-size + 0.7;
+
+								span.busint-lg-font{
+									margin-left: 1rem;
+								}
+							}
+
+							
+
+							.magnifying-glasses{
+							    width: 36rem;
+							    position: absolute;
+							    right: -10rem;
+							    top: 6rem;
+
+							    @include breakpoint($large-device){
+	    							width: 60rem;
+								    position: absolute;
+								    right: -18rem;
+								    top: -7rem;
+	    						} 
+								
+							}
+
+
+						}
+
+					}  
+				} 
+			} 
+
+			&#busint-section-2{
+				padding: 6.5rem 0;
+				position: relative;
+    			overflow: visible;
+
+
+    			@include breakpoint($large-device){
+					padding: 6.5rem 0 10rem 0; 
+    			}
+
+    			.busint-content-area{
+    				overflow: hidden;
+    			}
+
+    			.bg-vector-img{
+				    width: 45rem;
+				    position: absolute;
+				    right: 0;
+				    bottom: -30%;
+				    z-index: 0;
+				    opacity: 0.3;
+
+				    @include breakpoint($tablet){
+						opacity: 1;
+					}
+    			}
+
+				.busint-section-1{  
+					position: relative;
+					overflow: hidden;
+
+				    &:before{
+				    	width: 100%;
+				    	height: 100%;	
+				    	position: absolute;
+				    	content: '';
+				    	background-image: image('/svg/busint-bulb.svg');
+					    background-size: 250px;
+					    background-repeat: no-repeat;
+					    background-position: 110% 110px;
+					    top: 1rem;
+					    right: 0;
+					    z-index: 0;
+					    opacity: .15;
+					    overflow: hidden;
+
+				    }
+
+					p{ 
+						@include breakpoint($tablet){
+							width: 75%;	
+						}
+					}
+
+
+					.busint-badges{ 
+						margin-top: 5rem;
+						margin-bottom: 10rem;
+
+						p{
+							width: 100%;
+						}
+
+						.busint-left-content{
+							padding-right: 0;
+							margin-bottom: 3rem;
+
+							@include breakpoint($tablet){
+								margin-bottom: 0;
+							}
+
+							span.busint-lg-font{
+								margin-left: 1.5rem;
+							}
+						}
+
+						.busint-right-content{
+							img{
+								width: 100%; 
+								max-width: 400px;
+								
+								@include breakpoint($x-small-desktop){
+									width: 120%;  
+								}
+							}
+						}
+					}
+				}
+
+				.busint-section-2{
+					padding: 4rem 2rem 4rem 10rem; 
+					background: $busint-light-blue-bg;
+					position: relative; 
+
+					@include breakpoint($tablet){
+						padding: 4rem; 
+						padding-left: 28rem; 
+						
+					}
+					
+					img.busint-no1{
+						width: 15rem;
+						position: absolute;
+						left: -4rem;
+						top: -5rem;
+
+						@include breakpoint($tablet){
+							width: 32rem;
+						}
+					}
+
+				}
+
+				.busint-section-3{
+					padding: 6rem  1.5rem;;
+					 
+
+					@include breakpoint($tablet){
+						padding: 6rem;
+						padding-left: 30rem;
+					}
+
+					@include breakpoint($tablet-medium){ 
+						padding-left: 32rem;
+					}
+
+					.busint-cybersecurity{
+						flex-wrap: nowrap;
+
+						@include breakpoint($tablet){
+							flex-wrap: wrap;
+						}
+
+						.busint-right-content{
+
+							span.busint-lg-font{
+								display: block;
+							}
+						}
+					} 
+				}
+
+				.busint-section-4{
+					
+
+					@include breakpoint($tablet){
+						padding-top: 3rem;
+					}
+
+					.busint-business-people{
+
+						.busint-top-content{
+							margin-bottom: 3rem;
+
+						}
+					}
+				}
+			}
+
+			&#busint-section-3{
+				padding: 2rem 0;
+
+				span.busint-lg-font-fw600{
+					font-size: $main-heading-font-size;
+					line-height: $main-heading-font-size - 1;
+				}
+
+				.busint-left-content, .busint-right-content{
+					p{
+						&:first-child{
+							font-size: $default-font-size + 0.2;
+							line-height: $default-font-size + 1;
+						}
+						
+					}
+				}
+
+				.top-text{
+					p{
+						font-size: $default-font-size + 0.2;
+						line-height: $default-font-size + 1;
+					}
+				}
+				
+				.busint-section-1{
+
+					.busint-it-strategy{
+						margin-top: 5rem;
+
+						.busint-left-content{
+							position: relative;
+							overflow: hidden;
+							
+
+							img{
+								width: 200px;
+	    						margin: auto;
+	    						display: block;
+	    						top: 7px;
+	    						position: relative;
+	    						z-index: 1; 
+
+	    						@include breakpoint($tablet){
+									width: 240px; 
+								}
+
+ 
+							}
+
+							&:before{
+								content: '';
+								position: absolute;
+								height: 5px;
+								width: 100%;
+								background: $busint-text-blue;
+								bottom: 0; 
+								z-index: 100;
+							}
+						}
+
+						.busint-right-content{
+							@include flex-box();
+							align-items: center;
+							padding-top: 3rem;
+							padding-bottom: 3rem;
+
+
+
+						}
+					}
+				}
+				
+
+				.busint-section-2{
+					padding-top: 6.5rem; 
+					background: $busint-light-blue-bg; 
+
+					.top-text{
+						display: block;
+
+						@include breakpoint($tablet){
+							@include flex-box();
+							align-items: flex-end;
+						}
+
+						p{
+							&:first-child{
+								margin-right: 1.5rem;
+							}
+						}  
+					}
+
+					img.busint-competition{
+						position: relative;
+						left: -20rem;
+						@include calc('width', '100% + 50rem');
+						top: -5rem;
+
+					}
+				}
+
+				.busint-section-3{ 
+
+					.busint-it-department{ 
+
+						.busint-left-content{
+
+							&:before{
+								content: '';
+								position: absolute;
+								height: 5px;
+								width: 100%;
+								background: $busint-text-blue;
+								top: 0; 
+								left: 0;	
+								z-index: 100;
+							}
+
+							img{
+								width: 24rem;
+								display: block;
+								margin: auto;
+
+								@include breakpoint($tablet){
+									width: 27rem; 
+								}
+
+								@include breakpoint($tablet-medium){
+									width: 34rem; 
+								}
+							}
+						}
+
+						.busint-right-content{
+							padding: 0;
+							padding-top: 6rem;  
+
+
+							span.busint-lg-font-fw600{
+								display: block;
+								margin-bottom: 1rem; 
+							}
+						}
+					}
+				}
+			}
+
+
+			&#busint-section-4{
+				padding: 5rem 0;
+
+				.busint-content-area{
+
+					.busint-section-1{ 
+
+						.busint-innovative-businesses{
+							margin-top: 3rem;
+
+							@include breakpoint($tablet){ 
+								margin-top: 6rem; 
+							}
+
+							.busint-left-content{
+								img{
+									position: relative; 
+									width: 17rem;
+									display: block;
+									margin: auto;
+
+									@include breakpoint($tablet){
+										width: 34.5rem;
+										left: -10rem;
+									}
+								}
+							}
+
+							.busint-right-content{
+								p{
+									font-size: $default-font-size + 0.2;
+									line-height: $default-font-size + 1;
+								}
+
+								.busint-r1{
+									padding: 3rem 0 5rem 0;
+									margin-bottom: 5rem;
+									position: relative;
+
+									@include breakpoint($tablet){ 
+										padding: 5rem 0;
+									}
+
+									&:before{
+										content: '';
+										position: absolute;
+										height: 5px;
+										width: 100%;
+										bottom: 0;
+										background: $busint-text-blue;  
+										@include calc('width', '100% + 25rem');
+									}
+
+								}
+
+								.busint-r2{
+ 									position: relative; 
+
+ 									@include breakpoint($tablet){
+										left: -12rem;
+									}
+															
+									p{
+										text-align: left;
+
+										@include breakpoint($tablet){
+											text-align: right;
+										}
+									}
+
+									.busint-img-wrapper{
+										display: none;	 
+
+										@include breakpoint($tablet){
+											width: 20rem;
+											position: absolute;
+											right: -25rem;	
+											top: 0;
+											margin-top: 0;
+											display: block;	
+										}
+										
+										img{
+											position: relative;	
+											z-index: 100;
+										}
+
+										span.busint-img-line{
+
+											@include breakpoint($tablet){
+												content: '';
+												width: 24rem;
+	    										height: 18rem;
+												border-top: 5px #d2d2d2 solid;
+												border-left: 5px #d2d2d2 solid;
+											    bottom: -10rem;
+											    left: -22rem;	
+											    display: block;
+											    position: absolute;
+											    border-radius: 1.5rem;	
+											    z-index: 99;	
+
+
+											    &:before{
+											    	@include square-box(2.4rem, #1abaee);
+											    	content: ''; 	
+											    	bottom: 0;
+											    	position: absolute;
+	    											left: -1.4rem;
+	    											border-radius: 	50%;
+											    }
+
+											    &:after{
+											    	content: '';
+											    	@include square-box(1.3rem, #086dbd); 
+											    	position: absolute;	
+											    	bottom: 0.5rem;	
+	    											left: -0.9rem;
+	    											border-radius: 50%;  
+											    }
+											}
+
+										}
+
+										img{
+											width: 100%;	
+										}
+									}
+								}
+							}
+
+							.busint-open-architectures{
+								padding-top: 5rem;	
+								text-align: center;	
+
+								@include breakpoint($tablet){
+									padding-top: 8rem;	
+								}
+
+								h3{
+									color: $busint-text-blue;  
+									font-size: $section-h3-font-size + 0.5;
+									font-family: $busint-font-medium;
+									margin-bottom: 0;
+								} 
+
+								.busint-architectures-list-wrapper{ 
+
+									@include breakpoint($tablet){
+										@include calc('width', '100% + 15rem');
+										margin-top: 9rem;	
+										position: relative;
+										left: -6.5rem;
+
+										&:before{
+											content: ''; 	
+											position: absolute;
+											height: 5px;
+											width: 76%;
+											background: #d2d2d2;
+											left: 12%;
+											top: -4px;
+										}
+
+									    &:after{
+									    	width: 0.5rem;	
+									    	height: 7rem;	
+											content: ''; 	
+											position: absolute;
+											background: #d2d2d2;  
+											top: -7rem;
+											left: 50%;
+									    }
+									}
+
+
+
+								    .busint-architectures-list-item{ 
+								    	position: relative;
+										
+										@include breakpoint($tablet){
+								    		padding-top: 6rem;
+										}
+
+
+								    	span.busint-img-line{
+
+								    		@include breakpoint($tablet){
+												width: 0.5rem;	
+										    	height: 7rem;	
+												content: ''; 	
+												position: absolute;
+												background: #d2d2d2;  
+												top: 0; 
+												@include calc('left', '50% - 0.5rem');
+
+
+											    &:before{
+											    	@include square-box(2.4rem, #1abaee);
+											    	content: ''; 	
+											    	top: -1.4rem;
+											    	position: absolute;
+	    											left: -1rem;
+	    											border-radius: 	50%;
+											    }
+
+											    &:after{
+											    	content: '';
+											    	@include square-box(1.3rem, #086dbd); 
+											    	position: absolute;	
+											    	top: -0.8rem;	
+	    											left: -0.5rem;
+	    											border-radius: 	50%;  
+											    }
+											}
+
+										}
+
+
+								    	 
+
+								    	img{
+								    		height: 70px;
+								    		margin: 2rem 0;
+								    	}
+								    }
+
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&#busint-section-5{  
+				position: relative;
+
+				&:before{
+					position: absolute;
+					content: '';
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-image: image('busint-vector5.jpg'); 
+				    background-repeat: no-repeat; 
+				    background-size: 290%;
+    				background-position: 15% 108%;
+
+    				 @include breakpoint($large-device){
+			    		background-size: 172%; 
+				   	 	background-position: 5% 130%;
+					}
+				   
+				   
+				    @include breakpoint($tablet){
+			    		background-size: 172%; 
+				   	 	background-position: 5% 130%;
+					}
+
+					@include breakpoint($tablet-medium){
+			    		 
+					}
+
+					@include breakpoint($x-small-desktop){
+						background-position: 5% 215%;  
+						opacity: 1;
+					}
+
+
+				}
+
+
+				.busint-section-1{ 
+					position: relative; 
+					padding-top: 3rem;
+
+					&:before{
+						content: '';
+						width: 100%;	
+						height: 100%;	
+						background-image: image('busint-vector3.jpg');
+						position: absolute;
+						top: 0;
+						left: 0;
+						background-size: 104.5rem; 
+	   					background-repeat: no-repeat;
+	   					background-position: 88% 100%;
+	   					opacity: 0.2;
+	   					
+
+	   					@include breakpoint($tablet){
+				    		background-position: 35% -50%;
+				    		opacity: 0.4;
+						}
+
+						@include breakpoint($tablet-medium){
+				    		background-position: 35% -50%;
+						}
+
+						@include breakpoint($x-small-desktop){ 
+							background-size: 110%; 
+							background-position: 35% 130%;
+							opacity: 0.9;
+				    		 
+						}
+					}
+
+					.busint-vector3{
+						padding: 8rem 0 0 0;
+						width: 100%;  	
+
+						@include breakpoint($tablet){
+				    		width: 728px; 
+						}
+
+
+						h3{
+							font-size: $section-h3-font-size - 0.4;
+							font-family: $busint-font-bold; 
+							line-height: $section-h3-font-size - 0.2;
+							color: $busint-text-blue; 
+
+						}
+
+						.busint-balance-investment{ 
+
+							.busint-v1{
+								position: relative;
+								z-index: 100;
+
+								&:before{
+									 
+    								@include breakpoint($tablet){
+								    	content: '';
+										position: absolute; 
+										@include calc('height', '100% + 3rem');
+										width: 8px;
+										background: #0586ca;
+										right: 0;
+	    								top: -7rem;	
+	    								border-radius: 5px;
+									}
+
+									
+										
+								}
+
+								.busint-img-container{ 
+									position: relative;
+									top: -3rem;
+
+   		 							@include breakpoint($tablet){
+   		 								width: 30rem;
+										height: 20rem;
+										overflow: hidden;
+										@include rotate(-30deg);
+									    top: 1rem;
+	   		 							left: 4rem;
+   		 							}
+
+									
+
+									img{
+										width: 30rem;
+
+										@include breakpoint($tablet){ 
+											@include rotate(30deg);
+										}
+									}
+								}
+							}
+
+						}
+
+
+						.busint-emerging-technologies{
+
+							.busint-v2{
+								position: relative;
+								z-index: 100;
+
+
+								&:before{
+
+									@include breakpoint($tablet){ 
+										content: '';
+										position: absolute;
+										width: 100%;
+										height: 8px;
+										background: #0586ca;
+										bottom: -1rem;	
+										left: -5.5rem;
+										@include rotate(30deg);
+										border-radius: 5px;
+									}
+								}
+
+								.busint-img-container{ 
+
+									@include breakpoint($tablet){ 
+										width: 30rem;
+										height: 20rem;
+										overflow: hidden;
+										@include rotate(30deg);
+										margin-top: 5rem;
+									}
+
+									
+
+									img{
+										width: 28rem;
+
+										@include breakpoint($tablet){ 
+											@include rotate(-30deg);
+										}
+										
+									}
+								}
+							}
+
+						}
+
+						.busint-next-generation-networks{
+							margin-bottom: 3rem;
+
+							@include breakpoint($tablet){
+								margin-bottom: 0;
+    						}
+
+							.busint-v3{
+								position: relative;
+								display: flex;
+								flex-direction: column;
+								z-index: 99;
+
+								@include breakpoint($tablet){
+									display: block;
+									left: 7.5rem;
+	    							top: -3.5rem;
+	    						}
+
+    							h3{ 
+									order: 1;
+
+    								@include breakpoint($tablet){
+										float: right;	
+										left: -20rem;
+	    								top: -3rem;
+	    							}
+								}
+
+								&:before{
+
+									@include breakpoint($tablet){
+										content: '';
+										position: absolute;
+										width: 50%;
+										height: 8px;
+										background:  #0586ca;
+										top: 4rem;
+	    								left: -7rem;
+										@include rotate(150deg);
+										border-radius: 5px;
+										z-index: 1001;
+									}
+								}
+
+								.busint-img-container{
+									order: 2;
+
+									@include breakpoint($tablet){
+										width: 30rem;
+										height: 20rem;
+										overflow: hidden;
+										@include rotate(150deg);
+										margin-top: 0rem;
+	    								margin-left: 8rem;  
+									}
+
+    								.busint-layer{
+										
+
+	    								@include breakpoint($tablet){
+	    									width: 100px;
+	    									height: 200px;
+										    background: #fafafa;
+										    position: absolute;
+										    z-index: 98;
+										    bottom: 0;
+											@include rotate(150deg);
+											bottom: -6rem;
+	    									left: -6.5rem;
+										}
+
+    								}
+									
+
+									img{
+										width: 18rem;
+
+										@include breakpoint($tablet){
+											width: 28rem; 
+											@include rotate(-150deg);
+										}
+									}
+								}
+							}
+
+						}
+
+						.busint-para{ 
+
+							@include breakpoint($tablet){
+								padding-bottom: 30rem;
+							}
+
+							p{
+								font-size: $default-font-size + 0.2;
+							}
+
+						}
+
+					}
+
+				}
+
+				.busint-section-2{ 
+					position: relative; 
+
+					.busint-direction{
+					    width: 25rem;
+					    position: absolute;
+					    left: -5rem;
+    					top: -2rem;
+					    transform: rotate(60deg);
+					    opacity: 0.1;
+
+					    @include breakpoint($tablet){ 
+				    		
+						}
+
+						@include breakpoint($tablet-medium){
+				    		 opacity: 0.3; 
+						}
+
+						@include breakpoint($x-small-desktop){  
+							opacity: 1;
+				    		 
+						}
+					}
+
+					.busint-section-2-inner{
+						padding-top: 5rem;
+						padding-bottom: 5rem;
+						
+
+    					@include breakpoint($tablet){
+							padding-left: 6rem;
+							padding-bottom: 12rem;
+	    					margin-top: -20rem;
+						}
+
+    					p{
+    						font-size: $section-h4-font-size;
+    					}
+
+						.busint-top-content{
+							margin-bottom: 5rem;
+
+							img{
+								margin-top: 2rem;
+							}
+						}
+
+						.busint-bottom-content{
+
+							.busint-left-block{
+								margin-right: 2rem;
+								margin-bottom: 2rem;
+								float: left;
+
+								@include breakpoint($tablet){
+									margin-bottom: 0;
+								}
+
+								img{
+									width: 17rem;  
+									
+								}
+							}
+							
+							.busint-right-block{
+								float: left;
+
+								ul.busint-ratings{
+									margin-top: 1rem;
+
+									li{
+										width: 3.2rem;
+										height: 3.2rem;
+										display: inline-block;
+										background-image: image('svg/busint-star-active.svg');
+										background-repeat: no-repeat;
+										
+										&.busint-disabled{
+										 	background-image: image('svg/busint-star.svg');
+											background-repeat: no-repeat;
+										}
+									}
+								}
+							} 
+						}
+					} 
+				} 
+
+				.busint-footer{ 
+					padding: 5rem 2.5rem;
+					background: rgba(0, 0, 0, 0.75);
+					color: $busint-white;
+					margin-bottom: 15rem;
+
+					@include breakpoint($tablet){
+						padding: 5rem 12rem;
+					}
+
+					p{
+    					font-size: $default-font-size + 0.3;
+    					line-height: $default-font-size + 1.6; 
+					}
+
+					.busint-logo-copyright{
+						margin-top: 5rem;
+						@include flex-box();
+						align-items: flex-end; 
+						overflow: hidden;
+
+						.busint-logo{ 
+
+							p{
+								line-height: $default-font-size - 0.2; 
+
+								small{
+									font-size: $default-font-size - 0.5;  
+
+								}
+							}
+						}
+
+						.busint-copyright{
+							width: 180px;
+    						margin-left: auto;
+						}
+					}
+				}
+			}
+
+			.busint-content-area{ 
+				width: 100%;
+				position: relative;
+				z-index: 100;
+
+
+				h2{
+					font-size:  $section-h2-font-size;
+					font-family: $busint-font-medium; 
+					letter-spacing: -0.1rem;
+					line-height: $section-h2-font-size; 
+					position: relative;
+					padding-left: 6rem;
+				    margin-bottom: 2rem;
+				    margin-top: 3rem;
+
+
+					span{
+						position: absolute;
+					    left: -3rem;
+					    color: #fff;
+					    background: #009fdb;
+					    padding: 1.5rem 2.5rem;
+					    top: -10px;
+					    z-index: 1;
+					    line-height: $section-h2-font-size - 0.5;
+
+					    &:before{
+					    	position: absolute;
+					    	content: '';
+					    	width: 180%;
+						    height: 7rem;
+						    background: $busint-text-blue;
+						    top: 0;
+						    left: -12rem;
+						    z-index: 0;
+					    }
+					}
+				}
+
+				h4{
+					font-size:  $section-h4-font-size;
+					line-height: $section-h4-font-size + 0.7;
+					padding-left: 5.5rem;
+					margin-bottom: 3rem;
+					font-style: italic;
+				}
+			} 
+		}
+
+		&.busint-lg-img-section1{
+			height: 40rem;
+			background-image: image('analysis-team.jpg'); 
+			background-position: 50%; 
+			background-size: cover;
+
+			@include breakpoint($tablet){
+				height: 66rem; 
+				background-size: inherit;
+			}
+		}
+	}
+}
