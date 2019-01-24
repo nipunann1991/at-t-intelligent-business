@@ -191,9 +191,12 @@
 					&.busint-left-block{
 						
 						&:before{
-							left: -13.5rem; 
+							left: -12.5rem; 
 
-
+							@include breakpoint($large-device){
+								left: -13.5rem; 
+							}
+ 
 						}
 
 						.busint-blue-box{
@@ -232,7 +235,11 @@
 						}
 
 						&:before{
-							right: 0; 
+							right: -0.9rem; 
+
+							@include breakpoint($large-device){
+								right: 0; 
+							}
 
 							@include breakpoint($tablet){
 								right: -5.5rem;
@@ -596,6 +603,10 @@
 								margin-top: 5rem;
 								margin-bottom: 3rem;
 
+								@include ie-hack(){
+									display: block;
+								}
+
 								@include breakpoint($large-device){
 									margin-top: 2rem;
 									margin-bottom: 3rem;
@@ -610,6 +621,13 @@
 
 		    					p{
 		    						display: block;
+
+			    					@include ie-hack(){
+										float: left;
+										@include calc('width', '100% - 170px');
+
+									}
+
 		    					}
 
 								img.busint-sandclock{
@@ -618,6 +636,10 @@
 									top: 0;
 									display: block;
 									width: 170px;
+
+									@include ie-hack(){
+										float: left;
+									}
 
 									@include breakpoint($tablet){
 		    							right: -3rem;	
@@ -630,6 +652,10 @@
 
 							.busint-left-block{
 								@include flex-box(); 
+
+								@include ie-hack(){
+									display: block; 
+								}
 								 
 								@include breakpoint($tablet){
 	    							padding: 0;	 
@@ -652,12 +678,20 @@
 								.busint-mobile{ 
 									padding-right: 1.5rem;
 
+									@include ie-hack(){
+										float: left;
+									}
+
 									@include breakpoint($tablet){
 		    							padding-right: 3rem;
 		    						}
 
 									img{
 										width: 120px;
+
+										@include ie-hack(){
+											height: 220px;
+										}
 										
 										@include breakpoint($tablet){
 			    							width: 150px;	
@@ -983,11 +1017,15 @@
 
 						.busint-left-content{
 							position: relative;
-							overflow: hidden;
+							
+
+							@include breakpoint($large-device){
+								overflow: hidden;
+							}
 							
 
 							img{
-								width: 200px;
+								width: 20rem;
 	    						margin: auto;
 	    						display: block;
 	    						top: 7px;
@@ -995,7 +1033,7 @@
 	    						z-index: 1; 
 
 	    						@include breakpoint($tablet){
-									width: 240px; 
+									width: 24rem; 
 								}
 
  
@@ -1005,18 +1043,30 @@
 								content: '';
 								position: absolute;
 								height: 5px;
-								width: 100%;
+								width: 105%;
 								background: $busint-text-blue;
-								bottom: 0; 
+								bottom: -0.8rem;
+								left: -1rem;
 								z-index: 100;
+
+								@include breakpoint($large-device){
+									width: 100%;
+									bottom: 0; 
+									left: 0;
+								}
 							}
 						}
 
 						.busint-right-content{
 							@include flex-box();
 							align-items: center;
-							padding-top: 3rem;
-							padding-bottom: 3rem;
+							padding-top: 5rem;
+							padding-bottom: 5rem;
+
+							@include breakpoint($large-device){
+								padding-top: 3rem;
+								padding-bottom: 3rem;
+							}
 
 
 
@@ -1063,11 +1113,17 @@
 								content: '';
 								position: absolute;
 								height: 5px;
-								width: 100%;
-								background: $busint-text-blue;
+								width: 105%;
+								background: $busint-text-blue; 
 								top: 0; 
-								left: 0;	
+								left: -1rem;
 								z-index: 100;
+
+								@include breakpoint($large-device){
+									width: 100%;
+									top: 0; 
+									left: 0;
+								}
 							}
 
 							img{
@@ -1151,6 +1207,13 @@
 										bottom: 0;
 										background: $busint-text-blue;  
 										@include calc('width', '100% + 25rem');
+										left: -3rem;
+										z-index: 100;
+
+										@include breakpoint($large-device){ 
+											top: 0; 
+											left: 0;
+										}
 									}
 
 								}
@@ -1677,6 +1740,10 @@
 
 						.busint-bottom-content{
 
+							@include ie-hack(){
+								display: block;
+							}
+
 							.busint-left-block{
 								margin-right: 2rem;
 								margin-bottom: 2rem;
@@ -1688,6 +1755,10 @@
 
 								img{
 									width: 17rem;  
+
+									@include ie-hack(){
+										height: 13rem; 
+									}
 									
 								}
 							}
