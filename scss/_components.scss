@@ -1211,7 +1211,7 @@
 										z-index: 100;
 
 										@include breakpoint($large-device){ 
-											top: 0; 
+											bottom: 0; 
 											left: 0;
 										}
 									}
