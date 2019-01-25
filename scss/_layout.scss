@@ -56,6 +56,7 @@ span.busint-lg-font{
 	em{
 		font-style: normal;
 		font-size: $main-heading-font-size - 2.7;
+		font-family: inherit;
 	}
  
 	@include breakpoint($large-device){

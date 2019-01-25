@@ -202,6 +202,21 @@ $(function(){
                 .addTo(controller);
            
         });
+
+
+         $('#busint-section-5 .busint-ratings').each( function (index, element) { 
+             
+            var itemAnimLeft = new TimelineMax();  
+
+            itemAnimLeft   
+                .staggerFrom($(element).find('li'), 0.1, { autoAlpha: 0, scale: 0.5, ease: Power2.easeOut }, 0.1, 'scene1')
+                
+
+            var mainNavScene = new ScrollMagic.Scene({ triggerElement: element, triggerHook: "onEnter", offset: 200})
+                .setTween( itemAnimLeft )
+                .addTo(controller);
+           
+        });
  
        
 
